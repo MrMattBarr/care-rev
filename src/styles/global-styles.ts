@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     width: 100%;
+    background: #fec;
     line-height: 1.5;
   }
 

@@ -16,6 +16,7 @@ import { HomePage } from './containers/HomePage/Loadable';
 import { NotFoundPage } from './containers/NotFoundPage/Loadable';
 import { Countries } from './containers/Countries';
 import { useTranslation } from 'react-i18next';
+import { Country } from './containers/Country';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -33,6 +34,11 @@ export function App() {
           exact
           path={process.env.PUBLIC_URL + '/countries'}
           component={Countries}
+        />
+        <Route
+          exact
+          path={process.env.PUBLIC_URL + '/country/:id'}
+          component={Country}
         />
         <Route component={NotFoundPage} />
       </Switch>
